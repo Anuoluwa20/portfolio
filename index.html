@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Oyebanji Anuoluwapo — Product &amp; brand designer</title>
+    <!--app-head-->
+    <script>
+      (function () {
+        var d = document.documentElement, seen = false;
+        d.classList.add('first-load');
+        // Once per visit on the live site (a fresh key, so it plays again for anyone who saw the old
+        // intro). The review preview plays it on every load. If storage is blocked, it plays.
+        try { seen = '%VITE_PREVIEW%' !== '1' && !!sessionStorage.getItem('introSeen-curtain'); } catch (e) { seen = false; }
+        var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var inner = /\/(work|archive)(\/|$)/.test(location.pathname);
+        if (!seen && !rm && !inner) {
+          d.classList.add('intro-playing');
+          // Failsafe: if the app never takes over, never leave the intro up.
+          setTimeout(function () {
+            if (!d.classList.contains('intro-js')) { d.classList.remove('intro-playing'); d.classList.add('intro-seen'); }
+          }, 6000);
+        } else { d.classList.add('intro-seen'); }
+        // The site is light only (the owner chose the white option); the dark tokens stay unused.
+        d.dataset.option = 'b';
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/main.tsx"></script>
+  </body>
+</html>

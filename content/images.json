@@ -1,0 +1,456 @@
+{
+ "montra-cover": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "crunch-cover": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "confam-cover": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "ea-cover": {
+  "w": 1536,
+  "h": 960,
+  "s": 900
+ },
+ "commons-cover": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "portrait": {
+  "w": 768,
+  "h": 1024
+ },
+ "montra-dash": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "montra-mobile": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "montra-brand": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "montra-m-home": {
+  "w": 808,
+  "h": 1688
+ },
+ "montra-m-sale": {
+  "w": 808,
+  "h": 1688
+ },
+ "montra-m-onboard": {
+  "w": 808,
+  "h": 1688
+ },
+ "montra-m-tx": {
+  "w": 808,
+  "h": 1688
+ },
+ "montra-m-analytics": {
+  "w": 808,
+  "h": 1688
+ },
+ "confam-hero": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "confam-check": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "confam-check-m": {
+  "w": 780,
+  "h": 1688
+ },
+ "confam-hero-m": {
+  "w": 780,
+  "h": 1688
+ },
+ "confam-pause": {
+  "w": 1440,
+  "h": 749,
+  "s": 900
+ },
+ "confam-steps": {
+  "w": 1440,
+  "h": 1124,
+  "s": 900
+ },
+ "confam-fair": {
+  "w": 1440,
+  "h": 1340,
+  "s": 900
+ },
+ "confam-brand": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "crunch-bag-classic": {
+  "w": 640,
+  "h": 854
+ },
+ "crunch-bag-suya": {
+  "w": 640,
+  "h": 854
+ },
+ "crunch-bag-atarodo": {
+  "w": 640,
+  "h": 854
+ },
+ "crunch-flats": {
+  "w": 2000,
+  "h": 697,
+  "s": 900
+ },
+ "crunch-packs": {
+  "w": 2000,
+  "h": 864,
+  "s": 900
+ },
+ "crunch-board-identity": {
+  "w": 2000,
+  "h": 1125,
+  "s": 900
+ },
+ "crunch-board-flavours": {
+  "w": 2000,
+  "h": 1125,
+  "s": 900
+ },
+ "crunch-board-architecture": {
+  "w": 2000,
+  "h": 1125,
+  "s": 900
+ },
+ "crunch-ad-hero": {
+  "w": 1080,
+  "h": 1350
+ },
+ "crunch-ad-story": {
+  "w": 1080,
+  "h": 1920
+ },
+ "crunch-ad-classic": {
+  "w": 1080,
+  "h": 1350
+ },
+ "crunch-ad-suya": {
+  "w": 1080,
+  "h": 1350
+ },
+ "crunch-ad-atarodo": {
+  "w": 1080,
+  "h": 1350
+ },
+ "crunch-poster": {
+  "w": 1200,
+  "h": 1698,
+  "s": 900
+ },
+ "crunch-street": {
+  "w": 1122,
+  "h": 1402,
+  "s": 900
+ },
+ "ea-feed-navy": {
+  "w": 1080,
+  "h": 1350
+ },
+ "ea-feed-white": {
+  "w": 1080,
+  "h": 1350
+ },
+ "ea-story": {
+  "w": 1080,
+  "h": 1920
+ },
+ "ea-car-1": {
+  "w": 1080,
+  "h": 1350
+ },
+ "ea-car-2": {
+  "w": 1080,
+  "h": 1350
+ },
+ "ea-car-3": {
+  "w": 1080,
+  "h": 1350
+ },
+ "ea-car-4": {
+  "w": 1080,
+  "h": 1350
+ },
+ "ea-poster": {
+  "w": 1200,
+  "h": 1698,
+  "s": 900
+ },
+ "ea-airport": {
+  "w": 1536,
+  "h": 1024,
+  "s": 900
+ },
+ "ea-billboard": {
+  "w": 1536,
+  "h": 1024,
+  "s": 900
+ },
+ "ea-phones": {
+  "w": 1800,
+  "h": 1350,
+  "s": 900
+ },
+ "ea-lightbox-art": {
+  "w": 1190,
+  "h": 1830,
+  "s": 900
+ },
+ "ea-billboard-art": {
+  "w": 2000,
+  "h": 800,
+  "s": 900
+ },
+ "ea-brand": {
+  "w": 2000,
+  "h": 1125,
+  "s": 900
+ },
+ "arc-quickbyte": {
+  "w": 1024,
+  "h": 1017
+ },
+ "arc-onetap": {
+  "w": 1024,
+  "h": 768
+ },
+ "arc-vulnwatch": {
+  "w": 1024,
+  "h": 950
+ },
+ "arc-jiji": {
+  "w": 1024,
+  "h": 816
+ },
+ "arc-wealth": {
+  "w": 991,
+  "h": 1024
+ },
+ "arc-wander": {
+  "w": 1024,
+  "h": 513
+ },
+ "arc-quicktask": {
+  "w": 1024,
+  "h": 883
+ },
+ "arc-mindai": {
+  "w": 1024,
+  "h": 691
+ },
+ "arc-eventconnect": {
+  "w": 1024,
+  "h": 748
+ },
+ "arc-healthcare": {
+  "w": 1024,
+  "h": 682
+ },
+ "arc-worldbuilder": {
+  "w": 1024,
+  "h": 543
+ },
+ "arc-aiassistant": {
+  "w": 1024,
+  "h": 682
+ },
+ "arc-ecommerce": {
+  "w": 1024,
+  "h": 587
+ },
+ "arc-glance": {
+  "w": 1024,
+  "h": 367
+ },
+ "crunch-crisp": {
+  "w": 238,
+  "h": 240
+ },
+ "commons-flow": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "commons-table": {
+  "w": 1440,
+  "h": 900,
+  "s": 900
+ },
+ "commons-evening": {
+  "w": 1440,
+  "h": 900,
+  "s": 900
+ },
+ "commons-events": {
+  "w": 1440,
+  "h": 900,
+  "s": 900
+ },
+ "commons-speakers": {
+  "w": 1440,
+  "h": 900,
+  "s": 900
+ },
+ "velora-cover": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "velora-flyer": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-flyer-ig": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-car-1": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-car-2": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-car-3": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-story": {
+  "w": 1080,
+  "h": 1920
+ },
+ "velora-popup": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-box": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-tissue": {
+  "w": 1080,
+  "h": 1350
+ },
+ "velora-tag-front": {
+  "w": 560,
+  "h": 1000
+ },
+ "velora-tag-back": {
+  "w": 560,
+  "h": 1000
+ },
+ "velora-lockup": {
+  "w": 2000,
+  "h": 833,
+  "s": 900
+ },
+ "velora-mark": {
+  "w": 1024,
+  "h": 1024
+ },
+ "velora-reel-poster": {
+  "w": 720,
+  "h": 1280
+ },
+ "velora-tags": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-cover": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-phones": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-home": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-styles": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-light": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-onboard": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-layout": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-style": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-editor": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-night": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-sketch": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-budget": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-preview": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ },
+ "nocturne-walk": {
+  "w": 1800,
+  "h": 1125,
+  "s": 900
+ }
+}
