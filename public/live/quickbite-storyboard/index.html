@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuickBite Launch Storyboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* QuickBite brand world, single theme: cream paper, ink type, orange as the one accent; layout = brief → research → board → hooks → cuts */
+  --paper:#FFF9DA; --card:#FFFDF2; --ink:#111318; --muted:#5E5A48; --line:#E6DFC0; --orange:#FF4D1D;
+  --display:"Poppins",system-ui,sans-serif; --body:"Poppins",system-ui,sans-serif; color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+a{color:var(--ink);text-decoration-color:var(--orange);text-underline-offset:3px}
+a:focus-visible{outline:3px solid var(--orange);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:40px 24px 80px}
+header{display:grid;grid-template-columns:auto 1fr;gap:20px 28px;align-items:center;border-bottom:2px solid var(--ink);padding-bottom:28px}
+header svg{width:84px;height:58px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(30px,4.4vw,48px);line-height:1.05;margin:0;letter-spacing:-.02em;text-wrap:balance}
+.specs{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;font-weight:500;border:1.5px solid var(--ink);border-radius:99px;padding:4px 12px;font-variant-numeric:tabular-nums}
+.chip.alt{background:var(--ink);color:var(--paper)}
+section{margin-top:48px}
+h2{font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin:0 0 14px;color:var(--muted);font-weight:600}
+.idea{font-size:clamp(20px,2.4vw,27px);font-weight:500;line-height:1.35;max-width:32em;margin:0;text-wrap:balance}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.box b{display:block;font-size:20px;color:var(--orange);margin-bottom:4px}
+.find{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.find .box p{margin:6px 0 0;font-size:14px}
+.find .box .so{margin-top:10px;font-size:13px;font-weight:600;border-top:1px solid var(--line);padding-top:8px}
+.script svg{width:100%;height:auto;display:block}
+.script .tk{font:500 11px var(--body);fill:var(--muted)} .script .lbl{font:600 11px var(--body);fill:var(--muted);letter-spacing:.08em}
+.motion{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.motion div{border-left:3px solid var(--orange);padding:4px 0 4px 14px} .motion b{display:block}
+code{font-size:13px;background:var(--card);border:1px solid var(--line);border-radius:6px;padding:1px 6px}
+.board{display:grid;grid-template-columns:repeat(auto-fill,minmax(480px,1fr));gap:22px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:200px 1fr;align-items:start}
+.panel figure{margin:0;padding:12px 0 12px 12px}
+.panel img,.hook img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line)}
+.meta{padding:14px 16px 16px}
+.row1{display:flex;gap:10px;align-items:baseline;font-variant-numeric:tabular-nums}
+.num{font-weight:700;font-size:22px;color:var(--orange)} .tc{font-weight:600;font-size:13px} .dur{font-size:12px;color:var(--muted);margin-left:auto}
+h3{margin:2px 0 8px;font-size:17px;line-height:1.25}
+dl{margin:0;display:grid;grid-template-columns:74px 1fr;gap:6px 10px;font-size:13px;line-height:1.45}
+dt{color:var(--muted);font-weight:600;font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding-top:2px}
+dd{margin:0} dd.os{font-weight:600} dd.why{color:var(--muted);font-style:italic}
+.hooks{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px}
+.hook{display:grid;grid-template-columns:130px 1fr;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:12px}
+.hook p{margin:4px 0;font-size:14px} .muted{color:var(--muted)}
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tw{overflow-x:auto}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.qs{display:grid;gap:10px;max-width:800px;padding:0;margin:0;list-style:none;counter-reset:q}
+.qs li{counter-increment:q;display:grid;grid-template-columns:34px 1fr;gap:8px}
+.qs li:before{content:counter(q);width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;font-size:13px;font-weight:600}
+.src{columns:2 320px;font-size:13px;padding-left:18px} .src li{margin-bottom:6px;break-inside:avoid}
+@media (max-width:560px){.board{grid-template-columns:1fr} .grid3{grid-template-columns:1fr} .panel{grid-template-columns:130px 1fr} header{grid-template-columns:1fr}}
+</style></head><body><div class="wrap">
+<header>
+  <svg viewBox="866 406 191 131" aria-label="QuickBite fork mark"><path fill="#FF4D1D" d="M 1021.734375 521.414062 C 1021.449219 521.589844 1021.175781 521.757812 1020.917969 521.921875 C 1020.789062 522 1020.65625 522.078125 1020.53125 522.15625 C 1012.269531 527.234375 988.507812 537.046875 938.679688 525.886719 C 915.925781 520.789062 901.230469 518.167969 891.960938 516.828125 C 890.355469 516.59375 888.203125 516.3125 888.203125 516.3125 L 879.675781 492.519531 L 939.109375 494.808594 L 938.878906 503.804688 L 981.21875 504.933594 L 981.457031 495.710938 L 992.308594 495.710938 L 992.308594 481.957031 L 991.660156 481.957031 L 866.160156 478.605469 L 873.707031 459.078125 L 963.230469 459.078125 C 970.59375 459.078125 976.566406 453.109375 976.566406 445.742188 L 976.566406 443.527344 L 884.039062 443.527344 L 890.636719 423.480469 C 890.636719 423.480469 937.035156 416.988281 948.015625 416.070312 C 957.613281 415.273438 985.789062 406.371094 1013.257812 420.855469 C 1015.5 422.214844 1018.417969 424.039062 1021.8125 426.195312 C 1022.011719 426.320312 1022.210938 426.449219 1022.421875 426.582031 C 1057.296875 448.726562 1056.917969 499.757812 1021.734375 521.414062 "/></svg>
+  <h1>QuickBite launch ad: storyboard</h1>
+  <div class="specs"><span class="chip alt">Draft 2 · Play Store launch</span><span class="chip">Hero ad · 20 s</span><span class="chip">9:16 · 1080×1920 · 30 fps</span><span class="chip">Works on mute</span><span class="chip">3 hook variants to test</span><span class="chip">Logo: Option 1 fork mark</span></div>
+</header>
+
+<section><h2>The one idea</h2>
+<p class="idea">Your local buka, delivered without the trip, the queue or the guessing, and the vendor is paid every time. QuickBite is now on Google Play.</p></section>
+
+<section><h2>What the research says, and what I changed</h2>
+<div class="find">
+ <div class="box"><b>Win the first 3 seconds</b><p>Install ads that open on the product or result do better than logo intros, and a fade-in logo opening is called a conversion killer.</p><p class="so">So: the hook opens on the dish and the “Food is on the way” card. No logo intro.</p></div>
+ <div class="box"><b>Short, vertical, on mute</b><p>15–30 s is the standard range for install ads, vertical fills the phone, and many people watch muted.</p><p class="so">So: a 20 s hero cut, with every line on screen as text and sound as a bonus.</p></div>
+ <div class="box"><b>Hook → problem → solution → proof → one CTA</b><p>Launch videos that convert use this order, keep the problem short, and end with the app name and icon visible.</p><p class="so">So: the problem is 2.5 s, the brand and launch news land at 5 s, and there is one CTA.</p></div>
+ <div class="box"><b>Ile-Ife is contested</b><p>Chowdeck launched in Ile-Ife on 31 July 2026 with its own “who’s going to get food?” line, and local apps like TapChow and Vickgo already serve Osun.</p><p class="so">So: avoid the generic convenience pitch and lead with what QuickBite does differently: trust on both ends of the order.</p></div>
+ <div class="box"><b>Trust is the gap</b><p>A Techpoint investigation got a fictitious store live on Glovo and Chowdeck. Fake transfer alerts at food vendors keep making the news, including in Osun in 2026.</p><p class="so">So: “Verified” and “No fake alerts” become proof beats, built on QuickBite’s fintech-grade settlement.</p></div>
+ <div class="box"><b>Bukas are the moat</b><p>Analysts credit the winning local player’s early decision to onboard bukas, where the real food culture lives.</p><p class="so">So: the hook says “Your buka.” It is local, specific and warm.</p></div>
+</div></section>
+
+<section><h2>Story spine · And, But, Therefore</h2>
+<div class="grid3">
+ <div class="box"><b>And</b>Your favourite buka has the food you want tonight.</div>
+ <div class="box"><b>But</b>Getting it means a trip, a queue, and guessing whether the vendor is real and whether the payment landed.</div>
+ <div class="box"><b>Therefore</b>QuickBite: verified spots, pay your way, track it to your door, and the vendor is paid instantly. Now on Google Play.</div>
+</div></section>
+
+<section class="script"><h2>Colour and intensity script · 20 s</h2>
+<svg viewBox="0 -16 1000 138" role="img" aria-label="Colour per beat over 20 seconds with an intensity line peaking at the brand turn and the call to action">
+  <text x="0" y="0" class="lbl">INTENSITY</text>
+  <path d="M 62.5 13.0 L 187.5 19.0 L 287.5 4.0 L 387.5 16.0 L 525.0 16.0 L 662.5 16.0 L 775.0 10.0 L 912.5 7.0" fill="none" stroke="#FF4D1D" stroke-width="2.5" stroke-linejoin="round"/><g fill="#FF4D1D"><circle cx="62.5" cy="13.0" r="3.5"/><circle cx="187.5" cy="19.0" r="3.5"/><circle cx="287.5" cy="4.0" r="3.5"/><circle cx="387.5" cy="16.0" r="3.5"/><circle cx="525.0" cy="16.0" r="3.5"/><circle cx="662.5" cy="16.0" r="3.5"/><circle cx="775.0" cy="10.0" r="3.5"/><circle cx="912.5" cy="7.0" r="3.5"/></g><rect x="0.0" y="40" width="125.0" height="56" fill="#111318" stroke="#E6DFC0" stroke-width="1"/><rect x="125.0" y="40" width="125.0" height="56" fill="#2B2F36" stroke="#E6DFC0" stroke-width="1"/><rect x="250.0" y="40" width="75.0" height="56" fill="#FF4D1D" stroke="#E6DFC0" stroke-width="1"/><rect x="325.0" y="40" width="125.0" height="56" fill="#FFF9DA" stroke="#E6DFC0" stroke-width="1"/><rect x="450.0" y="40" width="150.0" height="56" fill="#FFF9DA" stroke="#E6DFC0" stroke-width="1"/><rect x="600.0" y="40" width="125.0" height="56" fill="#FFF9DA" stroke="#E6DFC0" stroke-width="1"/><rect x="725.0" y="40" width="100.0" height="56" fill="#111318" stroke="#E6DFC0" stroke-width="1"/><rect x="825.0" y="40" width="175.0" height="56" fill="#FF4D1D" stroke="#E6DFC0" stroke-width="1"/><text x="0.0" y="116" class="tk">0s</text><text x="125.0" y="116" class="tk">2.5s</text><text x="250.0" y="116" class="tk">5s</text><text x="325.0" y="116" class="tk">6.5s</text><text x="450.0" y="116" class="tk">9s</text><text x="600.0" y="116" class="tk">12s</text><text x="725.0" y="116" class="tk">14.5s</text><text x="825.0" y="116" class="tk">16.5s</text><text x="978" y="116" class="tk">20s</text>
+</svg>
+<p style="font-size:14px;color:var(--muted);max-width:62em;margin:10px 0 0">The hook is already high because it opens on the payoff. The problem drops into slate. The brand turn is the first full orange frame and the biggest contrast jump. Then the app plays on calm cream, the vendor beat returns to black, and orange comes back for the call to action.</p></section>
+
+<section><h2>Motion language</h2>
+<div class="motion">
+ <div><b>The three speed lines do the storytelling</b>They strike out the three pains, become the fork mark, and carry the final lockup.</div>
+ <div><b>Left to right means forward</b>Every screen, route and wipe moves the same way. Nothing moves backward.</div>
+ <div><b>Confident, not bouncy</b>Strong ease-out on entrances <code>cubic-bezier(0.16,1,0.3,1)</code>. One small overshoot each for the pin drop and the logo land.</div>
+ <div><b>Readable at speed</b>Lines stay at 6 words or fewer, each lands on a beat and holds long enough to read twice, and stays clear of the platform UI at the bottom.</div>
+ <div><b>Sound only on story moments</b>Strikes, the brand hit, pin, ding and final hit. The small UI moves stay quiet.</div>
+</div></section>
+
+<section><h2>Board · hero ad, 8 beats, 20 s</h2>
+<div class="board">
+<article class="panel"><figure><img src="frames/fh1.jpg" alt="Key frame 1: Hook · show the result" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">01</span><span class="tc">00.0–02.5 s</span><span class="dur">2.5 s</span></div>
+<h3>Hook · show the result</h3><dl>
+<dt>We see</dt><dd>The buka dish pushes in slowly. The “Food is on the way” card snaps up from the bottom with a firm ease-out. “Your buka.” lands, then “At your door.” A small fork mark sits bottom-left, so the brand is present without a logo intro.</dd><dt>On screen</dt><dd class="os">Your buka. At your door.</dd><dt>Sound</dt><dd>Pan sizzle, then a notification chime as the card lands.</dd><dt>Out</dt><dd>The card’s speed lines streak left to right and wipe to slate.</dd><dt>Why</dt><dd class="why">Opens on the outcome and the real app, never a logo. Readable on mute.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/fp.jpg" alt="Key frame 2: But · three pains, three strikes" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">02</span><span class="tc">02.5–05.0 s</span><span class="dur">2.5 s</span></div>
+<h3>But · three pains, three strikes</h3><dl>
+<dt>We see</dt><dd>Three lines appear 0.6 s apart. One orange speed line strikes through each as it lands, like the three lines of the fork mark.</dd><dt>On screen</dt><dd class="os">No trip. No queue. No guessing.</dd><dt>Sound</dt><dd>Three short whoosh-hits on the beat.</dd><dt>Out</dt><dd>The three strike lines slide together and lock into the fork mark.</dd><dt>Why</dt><dd class="why">The problem is short and specific. “Guessing” covers both fake alerts and unverified vendors.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/ft.jpg" alt="Key frame 3: Therefore · the brand and the news" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">03</span><span class="tc">05.0–06.5 s</span><span class="dur">1.5 s</span></div>
+<h3>Therefore · the brand and the news</h3><dl>
+<dt>We see</dt><dd>The speed lines become the fork mark as orange floods the frame. This is the biggest contrast jump in the film. “QuickBite.” lands, then the “Now on Google Play” pill pops in.</dd><dt>On screen</dt><dd class="os">QuickBite. Now on Google Play</dd><dt>Sound</dt><dd>Clean hit; the music opens up.</dd><dt>Out</dt><dd>Push into the mark; its head becomes the phone’s camera notch (match cut).</dd><dt>Why</dt><dd class="why">Name and launch news arrive by 6 s, so even people who stop watching here know what launched and where.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/ffd.jpg" alt="Key frame 4: Proof · real, verified vendors" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">04</span><span class="tc">06.5–09.0 s</span><span class="dur">2.5 s</span></div>
+<h3>Proof · real, verified vendors</h3><dl>
+<dt>We see</dt><dd>The phone rises. Vendor cards stagger in from the left. Iya Basira’s card gets the ring and the “Verified vendor” chip pops with a tick.</dd><dt>On screen</dt><dd class="os">Real local spots. Verified.</dd><dt>Sound</dt><dd>Light ticks as each card lands.</dd><dt>Out</dt><dd>Cut on action: a thumb taps the card.</dd><dt>Why</dt><dd class="why">Fake vendors are a known trust gap in Nigerian delivery apps. Only use this if QuickBite’s vendor checks back it up.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/fpp.jpg" alt="Key frame 5: Pick and pay" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">05</span><span class="tc">09.0–12.0 s</span><span class="dur">3.0 s</span></div>
+<h3>Pick and pay</h3><dl>
+<dt>We see</dt><dd>The card expands into the Ofada Rice screen (container transform). Tap the + button, then Add to cart. Card, Transfer and Wallet chips stack up, and Wallet lights up.</dd><dt>On screen</dt><dd class="os">Pick it. Pay your way.</dd><dt>Sound</dt><dd>Tap, pop, soft lock click.</dd><dt>Out</dt><dd>The screen slides left (forward) to the map.</dd><dt>Why</dt><dd class="why">Shows the real flow in 3 s and answers “how do I pay?” before anyone asks.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/ftr.jpg" alt="Key frame 6: Track" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">06</span><span class="tc">12.0–14.5 s</span><span class="dur">2.5 s</span></div>
+<h3>Track</h3><dl>
+<dt>We see</dt><dd>The pin drops with a small lift and squash. An orange route draws from the vendor to your door. The “Food is on the way” card rises.</dd><dt>On screen</dt><dd class="os">Track it to your door.</dd><dt>Sound</dt><dd>Pin thud, rising swell as the route draws.</dd><dt>Out</dt><dd>Hard cut to black on the beat.</dd><dt>Why</dt><dd class="why">The hook promised “at your door”; this beat shows how.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/fvd.jpg" alt="Key frame 7: The other side of the order" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">07</span><span class="tc">14.5–16.5 s</span><span class="dur">2.0 s</span></div>
+<h3>The other side of the order</h3><dl>
+<dt>We see</dt><dd>We flip to the vendor. Iya Basira’s stall, then a payment notice slides up as ₦3,500 counts up to a green tick.</dd><dt>On screen</dt><dd class="os">Vendor paid instantly. No fake alerts.</dd><dt>Sound</dt><dd>One subtle ding.</dd><dt>Out</dt><dd>Three speed lines streak in and wipe to orange.</dd><dt>Why</dt><dd class="why">No other app in this market is talking about the vendor side. Only claim “instantly” if settlement really is instant.</dd></dl></div></article>
+<article class="panel"><figure><img src="frames/fec.jpg" alt="Key frame 8: Call to action · launch" width="540" height="960" loading="lazy"></figure>
+<div class="meta"><div class="row1"><span class="num">08</span><span class="tc">16.5–20.0 s</span><span class="dur">3.5 s</span></div>
+<h3>Call to action · launch</h3><dl>
+<dt>We see</dt><dd>The speed lines converge into the full lockup with one small overshoot. “Now on Google Play” lands. The official badge pops in, unaltered. “Order your first meal today.” Hold 2 s or more.</dd><dt>On screen</dt><dd class="os">Now on Google Play · Order your first meal today.</dd><dt>Sound</dt><dd>Final hit, then the music resolves.</dd><dt>Out</dt><dd>Hold.</dd><dt>Why</dt><dd class="why">One clear action. The app name and mark are on screen so people recognise the listing in the store.</dd></dl></div></article>
+</div></section>
+
+<section><h2>Hook variants · swap the first 2.5 s, test all three</h2>
+<div class="hooks"><article class="hook"><img src="frames/fh1.jpg" alt="Hook A · Result-first (hero)" width="540" height="960" loading="lazy"><div><h3>A · Result-first (hero)</h3><p>“Your buka. At your door.” Opens on the payoff and the real app.</p><p class="muted">Most broadly relevant; use it as the control.</p></div></article><article class="hook"><img src="frames/fhb.jpg" alt="Hook B · Vendor POV" width="540" height="960" loading="lazy"><div><h3>B · Vendor POV</h3><p>“POV: you sell food, and ‘the transfer has landed.’” A FAKE stamp, then “Not on QuickBite.”</p><p class="muted">Pattern interrupt drawn from a pain every Nigerian seller knows; also recruits vendors.</p></div></article><article class="hook"><img src="frames/fhc.jpg" alt="Hook C · Deadline" width="540" height="960" loading="lazy"><div><h3>C · Deadline</h3><p>“9:47 pm. Your buka closes at 10. It’s raining.”</p><p class="muted">A specific, local moment; strongest in the evening and on rainy days.</p></div></article></div>
+<p style="font-size:14px;color:var(--muted);max-width:62em">Everything after 2.5 s stays the same, so you get three ads from one edit. Judge them on 3-second view rate first, then install rate.</p></section>
+
+<section><h2>Cuts to deliver from the same scenes</h2>
+<div class="tw"><table>
+<tr><th>Cut</th><th>Length · format</th><th>Where</th><th>Notes</th></tr>
+<tr><td>Hero ad ×3 hooks</td><td>20 s · 9:16</td><td>Instagram Reels, TikTok, WhatsApp Status</td><td>The board above. Captions are burned in.</td></tr>
+<tr><td>Bumper</td><td>6 s · 9:16 and 1:1</td><td>Stories, retargeting</td><td>Hook A, then the end card.</td></tr>
+<tr><td>Play Store listing video</td><td>25–30 s · portrait or landscape</td><td>Uploaded to YouTube and linked in Play Console</td><td>Show the real app full-screen with no phone frames, and avoid words like “best” or “#1”. End on the logo and “Order your first meal” rather than the badge.</td></tr>
+</table></div></section>
+
+<section><h2>Google Play badge rules for the end card</h2>
+<ul style="font-size:14px;max-width:60em;margin:0;padding-left:18px">
+ <li>Use the official “Get it on Google Play” badge from Google’s badge generator, exactly as supplied. Don’t redraw or recolour it. The storyboard shows a placeholder in its place.</li>
+ <li>Leave clear space around it equal to a quarter of the badge’s height.</li>
+ <li>If you go live before launch day, use the “Pre-register on Google Play” badge and change the line to “Coming soon to Google Play”.</li>
+</ul></section>
+
+<section><h2>To confirm before I animate</h2>
+<ol class="qs">
+ <li>Launch area: the app screens show Ile-Ife addresses. Is the launch Ife/OAU only? If so, I’ll add “Now in Ile-Ife” to the end card, because local copy usually beats national copy.</li>
+ <li>Claims: are vendors really checked before they go live, and is vendor payment really instant? Those two beats are the strongest reason to switch, so they must be true as written.</li>
+ <li>Launch offer: is there one, such as free delivery on the first order? If so, it goes on the end card.</li>
+ <li>Live now or pre-register? This decides which badge and line the end card uses.</li>
+ <li>A better hero photo: the hook needs one bright, close, steaming shot of a real buka plate. The current app photos are low resolution.</li>
+</ol></section>
+
+<section><h2>Sources</h2><ol class="src"><li><a href="https://techcabal.com/2026/04/24/glovo-names-nigeria-fastest-growing-market/">Glovo names Nigeria its fastest-growing market (TechCabal)</a></li><li><a href="https://x.com/chowdeck/status/2083225353724612878">Chowdeck launches in Ile-Ife (Chowdeck on X)</a></li><li><a href="https://techpoint.africa/insight/fake-vendors-inside-food-delivery-platforms/">Fake vendors inside food delivery platforms (Techpoint Africa)</a></li><li><a href="https://gazettengr.com/osun-police-nab-four-suspects-using-fake-alerts-to-buy-goods/">Osun police nab suspects using fake alerts (Gazette)</a></li><li><a href="https://techmoonshot.com/2026/03/27/nigerias-food-delivery-war-is-over-the-quick-commerce-war-is-just-beginning/">Nigeria’s food delivery war is over (Techmoonshot)</a></li><li><a href="https://neverframe.com/blog/app-install-video-ads-guide">App install video ads guide (Neverframe)</a></li><li><a href="https://greenfroglabs.com/blog/mobile-video-advertising">Mobile video advertising: what works (Greenfrog Labs)</a></li><li><a href="https://www.appalize.com/blog/creative-optimization/how-to-design-app-store-preview-videos-that-convert">How to design app preview videos that convert (Appalize)</a></li><li><a href="https://www.applaunchflow.com/blog/google-play-promo-video-requirements-2026">Google Play promo video requirements 2026 (AppLaunchFlow)</a></li><li><a href="https://www.gummicube.com/blog/google-play-store-preview-video-guidelines/">Google Play preview video guidelines (Gummicube)</a></li><li><a href="https://developer.android.com/distribute/tools/promote/badges">Google Play badges and guidelines (Android Developers)</a></li><li><a href="https://quickframe.mountain.com/meta-platform-expert/">Meta platform best practices (QuickFrame)</a></li></ol></section>
+</div></body></html>
